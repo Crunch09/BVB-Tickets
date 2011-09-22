@@ -20,7 +20,7 @@ public class BVBTickets extends JFrame {
         int time = 15000;
         //Erster Parameter gibt die URL des entsprechenden
         //Threads an
-        if (args.length != 1) {
+        if (args.length < 1 || args.length > 2) {
             System.err.println("Funktionsweise: java BVBTickets URLDesEntsprechendenThreads [ZeitInSecZwischenZweiAnfragen]");
         } else {
             try {
