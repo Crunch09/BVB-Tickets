@@ -34,16 +34,9 @@ public class BVBTickets extends JFrame {
                     Thread.sleep(time);
                 }
             } catch (Exception ex) {
-                //System.out.println(ex.getMessage());
                 System.err.println("Bitte gib eine gueltige URL an.");
-                // System.exit(-1);
             } finally {
-                /*if (sourceCode != null) {
-                try {
-                sourceCode.close();
-                } catch (IOException e) {
-                }
-                }*/
+              
             }
         }
     }
