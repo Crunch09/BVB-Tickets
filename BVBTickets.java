@@ -3,6 +3,7 @@ import java.net.URL;
 import java.util.Scanner;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JEditorPane;
 
 /**
  *
@@ -48,7 +49,7 @@ public class BVBTickets extends JFrame {
         String s;
         String x = "";
 
-        java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("dd.MM.yyyy HH.mm.ss");
+        java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
 
         try {
             while ((s = sc.nextLine()) != null) {
@@ -85,8 +86,10 @@ public class BVBTickets extends JFrame {
                     System.out.println("Neuer Post. Zaehler: "+ zaehler +" Uhrzeit: "+ sdf.format(now));
                     JFrame frame = new JFrame("Neuer Ticket-Post!!");
                     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                    JLabel label = new JLabel("Hello World");
-                    frame.getContentPane().add(label);
+                    //JLabel label = new JLabel(post);
+                    JEditorPane postContent = new JEditorPane("text/html", post);
+                    postContent.setEditable(false);
+                    frame.getContentPane().add(postContent);
                     frame.setSize(400, 300);
                     frame.setAlwaysOnTop(true);
 
